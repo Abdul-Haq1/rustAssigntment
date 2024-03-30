@@ -1,0 +1,12 @@
+function medianOfSortedArray(arr) {
+    const n = arr.length;
+    const mid = Math.floor(n / 2);
+
+    if (n % 2 === 0) {
+        // If array has even number of elements, average the two middle elements
+        return (arr[mid - 1] + arr[mid]) / 2;
+    } else {
+        // If array has odd number of elements, return the middle element
+        return arr[mid];
+    }
+}
