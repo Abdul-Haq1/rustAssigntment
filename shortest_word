@@ -1,0 +1,19 @@
+function shortestWord(str) {
+    // Split the string into an array of words
+    const words = str.split(/\s+/);
+    
+    // Initialize variables to store the shortest word and its length
+    let shortest = words[0];
+    let shortestLength = shortest.length;
+    
+    // Iterate through the array to find the shortest word
+    for (let i = 1; i < words.length; i++) {
+        const currentWord = words[i];
+        if (currentWord.length < shortestLength) {
+            shortest = currentWord;
+            shortestLength = currentWord.length;
+        }
+    }
+    
+    return shortest;
+}
